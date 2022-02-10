@@ -15,8 +15,8 @@ Use it! In your CMakeLists.txt file:
 ```
 add_subdirectory(boost-cmake)
 ...
-target_link_libraries(lib_using_filesystem PUBLIC Boost::filesystem)
-target_link_libraries(lib_using_header_only PUBLIC Boost::boost)
+target_link_libraries(lib_using_filesystem PUBLIC boost::filesystem)
+target_link_libraries(lib_using_header_only PUBLIC boost::boost)
 ```
 
 ## Configuration

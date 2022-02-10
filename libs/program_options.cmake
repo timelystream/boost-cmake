@@ -17,7 +17,7 @@ _add_boost_lib(
 _add_boost_test(
   NAME program_options_test
   LINK
-    Boost::program_options
+        boost::program_options
   TESTS
     RUN ${BOOST_SOURCE}/libs/program_options/test/options_description_test.cpp
     RUN ${BOOST_SOURCE}/libs/program_options/test/variable_map_test.cpp

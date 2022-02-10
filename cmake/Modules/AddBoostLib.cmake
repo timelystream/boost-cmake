@@ -5,7 +5,7 @@ function(_add_boost_lib)
   cmake_parse_arguments(BOOSTLIB "${options}" "${oneValueArgs}"
                         "${multiValueArgs}" ${ARGN})
   add_library(Boost_${BOOSTLIB_NAME} STATIC ${BOOSTLIB_SOURCES})
-  add_library(Boost::${BOOSTLIB_NAME} ALIAS Boost_${BOOSTLIB_NAME})
+  add_library(boost::${BOOSTLIB_NAME} ALIAS Boost_${BOOSTLIB_NAME})
   set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES
     OUTPUT_NAME "boost_${BOOSTLIB_NAME}"
     FOLDER "Boost"
@@ -13,7 +13,7 @@ function(_add_boost_lib)
   if(NOT BOOST_STANDALONE)
     set_target_properties(Boost_${BOOSTLIB_NAME} PROPERTIES EXCLUDE_FROM_ALL 1)
   endif()
-  target_link_libraries(Boost_${BOOSTLIB_NAME} PUBLIC Boost::boost)
+  target_link_libraries(Boost_${BOOSTLIB_NAME} PUBLIC boost::headers_only)
   if(MSVC)
     target_compile_options(Boost_${BOOSTLIB_NAME} PRIVATE /W0)
   else()

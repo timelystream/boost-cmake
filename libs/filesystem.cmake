@@ -16,7 +16,7 @@ _add_boost_lib(
 _add_boost_test(
   NAME filesystem_test
   LINK
-    Boost::filesystem
+    boost::filesystem
   TESTS
     RUN ${BOOST_SOURCE}/libs/filesystem/test/convenience_test.cpp
     RUN ${BOOST_SOURCE}/libs/filesystem/test/macro_default_test.cpp

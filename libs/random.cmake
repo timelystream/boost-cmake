@@ -7,8 +7,8 @@ _add_boost_lib(
 _add_boost_test(
   NAME random_test
   LINK
-    Boost::random
-    Boost::unit_test_framework
+        boost::random
+        boost::unit_test_framework
   TESTS
     RUN ${BOOST_SOURCE}/libs/random/test/histogram.cpp
     RUN ${BOOST_SOURCE}/libs/random/test/multiprecision_float_test.cpp

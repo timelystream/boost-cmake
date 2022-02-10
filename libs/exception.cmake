@@ -7,8 +7,8 @@ _add_boost_lib(
 _add_boost_test(
   NAME exception_test
   LINK
-    Boost::exception
-    Boost::thread
+        boost::exception
+        boost::thread
   TESTS
     RUN ${BOOST_SOURCE}/libs/exception/test/is_output_streamable_test.cpp
     RUN ${BOOST_SOURCE}/libs/exception/test/has_to_string_test.cpp

@@ -38,10 +38,10 @@ endif()
 _add_boost_test(
   NAME iostreams_test
   LINK
-    Boost::iostreams
-    Boost::filesystem
-    Boost::regex
-    Boost::unit_test_framework
+        boost::iostreams
+        boost::filesystem
+        boost::regex
+        boost::unit_test_framework
   TESTS
     RUN ${BOOST_SOURCE}/libs/iostreams/test/array_test.cpp
     RUN ${BOOST_SOURCE}/libs/iostreams/test/auto_close_test.cpp
@@ -93,9 +93,9 @@ if(BZIP2_FOUND)
   _add_boost_test(
     NAME iostreams_test
     LINK
-      Boost::iostreams
-      Boost::filesystem
-      Boost::unit_test_framework
+          boost::iostreams
+          boost::filesystem
+          boost::unit_test_framework
     TESTS
       RUN ${BOOST_SOURCE}/libs/iostreams/test/bzip2_test.cpp
   )
@@ -105,9 +105,9 @@ if(ZLIB_FOUND)
   _add_boost_test(
     NAME iostreams_test
     LINK
-      Boost::iostreams
-      Boost::filesystem
-      Boost::unit_test_framework
+          boost::iostreams
+          boost::filesystem
+          boost::unit_test_framework
     TESTS
       RUN ${BOOST_SOURCE}/libs/iostreams/test/gzip_test.cpp
       RUN ${BOOST_SOURCE}/libs/iostreams/test/zlib_test.cpp

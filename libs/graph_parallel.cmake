@@ -8,5 +8,5 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/graph_parallel/src/mpi_process_group.cpp
     ${BOOST_SOURCE}/libs/graph_parallel/src/tag_allocator.cpp
   LINK
-    Boost::mpi
+        boost::mpi
 )

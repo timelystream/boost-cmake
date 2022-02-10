@@ -10,8 +10,8 @@ _add_boost_lib(
 _add_boost_test(
   NAME atomic_test
   LINK
-    Boost::atomic
-    Boost::thread
+        boost::atomic
+        boost::thread
   DEFINE
     # The tests expect APIs deprecated in Thread v4, so enable them
     BOOST_THREAD_PROVIDES_NESTED_LOCKS=1

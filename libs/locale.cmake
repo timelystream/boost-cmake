@@ -71,7 +71,7 @@ if(BOOST_LOCALE_ENABLE_ICU_BACKEND AND ICU_FOUND)
     ${BOOST_SOURCE}/libs/locale/src/icu/time_zone.cpp
   )
   target_link_libraries(Boost_locale_deps INTERFACE
-    Boost::thread
+          boost::thread
     ICU::dt
     ICU::i18n
     ICU::uc
@@ -138,7 +138,7 @@ endif()
 _add_boost_test(
   NAME locale_test
   LINK
-    Boost::locale
+        boost::locale
     Boost_locale_deps
   TESTS
     # Configuration information

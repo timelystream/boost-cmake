@@ -17,15 +17,15 @@ _add_boost_lib(
   DEFINE_PRIVATE
     BOOST_COROUTINES_SOURCE
   LINK
-    Boost::context
-    Boost::thread
+        boost::context
+        boost::thread
 )
 
 _add_boost_test(
   NAME coroutine_test
   LINK
-    Boost::coroutine
-    Boost::unit_test_framework
+        boost::coroutine
+        boost::unit_test_framework
   TESTS
     RUN ${BOOST_SOURCE}/libs/coroutine/test/test_asymmetric_coroutine.cpp
     RUN ${BOOST_SOURCE}/libs/coroutine/test/test_symmetric_coroutine.cpp

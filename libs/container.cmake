@@ -15,8 +15,8 @@ _add_boost_lib(
 _add_boost_test(
   NAME container_test
   LINK
-    Boost::container
-    Boost::timer
+        boost::container
+        boost::timer
   TESTS
     RUN ${BOOST_SOURCE}/libs/container/test/alloc_basic_test.cpp
     RUN ${BOOST_SOURCE}/libs/container/test/alloc_full_test.cpp

@@ -14,7 +14,7 @@ _add_boost_test(
   DEFINE
     BOOST_DATE_TIME_POSIX_TIME_STD_CONFIG
   LINK
-    Boost::date_time
+        boost::date_time
   TESTS
     # core suite
     RUN ${BOOST_SOURCE}/libs/date_time/test/testint_adapter.cpp

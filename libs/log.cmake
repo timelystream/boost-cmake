@@ -51,10 +51,10 @@ _add_boost_lib(
   INCLUDE_PRIVATE
     ${BOOST_SOURCE}/libs/log/src
   LINK
-    Boost::atomic
-    Boost::date_time
-    Boost::filesystem
-    Boost::thread
+        boost::atomic
+        boost::date_time
+        boost::filesystem
+        boost::thread
     $<$<BOOL:${USE_WINDOWS}>:
       ws2_32
       mswsock
@@ -74,7 +74,7 @@ endif()
 try_compile(HAVE_ATOMIC_INT32
   "${CMAKE_CURRENT_BINARY_DIR}"
   "${BOOST_SOURCE}/libs/log/config/atomic-int32/atomic_int32.cpp"
-  LINK_LIBRARIES Boost::boost
+  LINK_LIBRARIES boost::headers_only
 )
 if(NOT HAVE_ATOMIC_INT32)
   target_compile_definitions(Boost_log PRIVATE BOOST_LOG_WITHOUT_IPC)
@@ -152,7 +152,7 @@ _add_boost_lib(
   INCLUDE_PRIVATE
     ${BOOST_SOURCE}/libs/log/src
   LINK
-    Boost::log
+        boost::log
 )
 
 add_library(Boost_log_common INTERFACE)
@@ -161,13 +161,13 @@ target_include_directories(Boost_log_common INTERFACE ${BOOST_SOURCE}/libs/log/t
 _add_boost_test(
   NAME log_test
   LINK
-    Boost::date_time
-    Boost::filesystem
-    Boost::log
-    Boost::log_setup
-    Boost::regex
-    Boost::thread
-    Boost::unit_test_framework
+        boost::date_time
+        boost::filesystem
+        boost::log
+        boost::log_setup
+        boost::regex
+        boost::thread
+        boost::unit_test_framework
     Boost_log_common
   TESTS
     RUN ${BOOST_SOURCE}/libs/log/test/run/attr_attribute_set.cpp

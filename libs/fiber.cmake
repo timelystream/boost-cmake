@@ -20,7 +20,7 @@ _add_boost_lib(
   DEFINE_PRIVATE
     BOOST_FIBERS_SOURCE=1
   LINK
-    Boost::context
+        boost::context
 )
 set_target_properties(Boost_fiber PROPERTIES
   CXX_STANDARD 11
@@ -30,9 +30,9 @@ set_target_properties(Boost_fiber PROPERTIES
 _add_boost_test(
   NAME fiber_test
   LINK
-    Boost::fiber
-    Boost::thread
-    Boost::unit_test_framework
+        boost::fiber
+        boost::thread
+        boost::unit_test_framework
   TESTS
     RUN ${BOOST_SOURCE}/libs/fiber/test/test_async_dispatch.cpp
     RUN ${BOOST_SOURCE}/libs/fiber/test/test_async_post.cpp

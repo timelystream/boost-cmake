@@ -91,7 +91,7 @@ endforeach()
 # TODO: Move those to option() calls in the right file
 if(NOT BOOST_STANDALONE)
   # Compilation options required by all platforms
-  target_compile_definitions(Boost::boost INTERFACE
+  target_compile_definitions(boost::headers_only INTERFACE
     $<$<CONFIG:Release>:BOOST_DISABLE_ASSERT>
     BOOST_SYSTEM_NO_DEPRECATED
     BOOST_THREAD_VERSION=4
@@ -102,5 +102,5 @@ endif()
 
 if(USE_ANDROID)
   # Android doesn't support thread local storage through compiler intrinsics
-  target_compile_definitions(Boost::boost INTERFACE BOOST_ASIO_DISABLE_THREAD_KEYWORD_EXTENSION)
+  target_compile_definitions(boost::headers_only INTERFACE BOOST_ASIO_DISABLE_THREAD_KEYWORD_EXTENSION)
 endif()

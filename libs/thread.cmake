@@ -18,7 +18,7 @@ _add_boost_lib(
   DEFINE_PRIVATE
     BOOST_THREAD_BUILD_LIB=1
   LINK
-    Boost::chrono
+        boost::chrono
 )
 if(NOT USE_WINDOWS)
   find_package(Threads REQUIRED)

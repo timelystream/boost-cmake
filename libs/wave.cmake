@@ -13,7 +13,7 @@ _add_boost_lib(
     ${BOOST_SOURCE}/libs/wave/src/token_ids.cpp
     ${BOOST_SOURCE}/libs/wave/src/wave_config_constant.cpp
   LINK
-    Boost::date_time
-    Boost::filesystem
-    Boost::thread
+        boost::date_time
+        boost::filesystem
+        boost::thread
 )
